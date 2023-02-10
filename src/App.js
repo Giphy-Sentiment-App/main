@@ -1,8 +1,21 @@
+import './styles.css' ; 
+import Home from './components/Home';
+import Footer from './components/Footer';
 
-function App() {
+
+
+const App = ()=> {
   return (
-   <>
-   </>
+  <>
+  <Home />
+  <Footer />
+  
+  
+  </>
+
+  
+
+
   );
 }
 
