@@ -1,18 +1,16 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import axios from "axios";
+import GifResult from "./GifResult";
 
 
 const Form = () => {
 
-  const [ gifs, setGifs] = useState({});
+  const [ gifs, setGifs] = useState([]);
   const [ userInput, setUserInput ] = useState('');
 
- 
-  
   const handleClick = (event) => {
     event.preventDefault();
   
-
   axios({
     baseURL: `https://api.giphy.com/v1/gifs/search`,
     params: {
@@ -21,8 +19,9 @@ const Form = () => {
       limit: 9,
       rating: "g"
     }
-  }).then ((data) => {
-    console.log(data);
+  }).then ((res) => {
+    setGifs(res.data.data);
+    console.log(res.data.data);
   }) 
 }
 
@@ -32,7 +31,7 @@ const handleChange = (event) => {
 
 return (
     
-
+    <>
     <div>
       <form action="" onSubmit = {(event) => {handleClick(event, userInput)}} >
         <label htmlFor="search"></label>
@@ -40,6 +39,9 @@ return (
         <button type="submit">Submit</button>          
       </form>
     </div>
+
+    <div><GifResult gifs={gifs}/></div>
+    </>
   )
 }
 
