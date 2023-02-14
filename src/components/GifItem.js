@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 const GifItem = ({gifData})=> {
 
-  const [userClick, setUserClick] = useState(null);
+  // const [userClick, setUserClick] = useState(null);
   const currentDate = new Date();
   const options = {year:'numeric', month:'numeric', day:'numeric'}
 
@@ -12,8 +12,8 @@ const GifItem = ({gifData})=> {
     
     const database = getDatabase(firebase);
     const dbRef = ref(database, '/userHistory/gifUrl');
-    push(dbRef, userClick);
-    setUserClick(gifData.images.original.url);
+    push(dbRef, gifData.images.original.url);
+    // setUserClick();
 
     const userSavedData = (user) => {
       const userData = ref(database, '/userHistory/date')
