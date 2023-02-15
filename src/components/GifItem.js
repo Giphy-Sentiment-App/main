@@ -15,7 +15,10 @@ const GifItem = ({gifData, userInput})=> {
     
     const database = getDatabase(firebase);
     const dbRef = ref(database, '/userHistory');
-    push(dbRef, userChoice);
+    const firebaseObject = push(dbRef, userChoice);
+    const firebaseKey = firebaseObject.key
+    
+    
     // setUserClick();
   
     // clear page on click function needed to be placed correctly

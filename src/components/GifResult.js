@@ -9,7 +9,7 @@ const GifResult = ({gifs, emptyInput, userInput}) => {
           emptyInput ? <p>Please tell us how you are feeling today</p>
           
           : (gifs.map((gifObject)=>{
-            // console.log(gifObject);
+            console.log(gifObject);
             return <li key={gifObject.id}> <GifItem gifData={gifObject} userInput ={userInput}/> </li>
           }))
     }
