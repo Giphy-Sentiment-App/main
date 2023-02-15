@@ -1,25 +1,23 @@
 import firebase from '../firebase';
 import { getDatabase, ref, push } from 'firebase/database';
-import { useState } from 'react';
 
-const GifItem = ({gifData})=> {
+const GifItem = ({gifData, userInput})=> {
 
-  // const [userClick, setUserClick] = useState(null);
   const currentDate = new Date();
   const options = {year:'numeric', month:'numeric', day:'numeric'}
+  const userChoice = {
+    date: currentDate.toLocaleString(undefined, options),
+    gifUrl: gifData.images.original.url,
+    emotion: userInput
+  }
 
   const gifClick = () => {
     
     const database = getDatabase(firebase);
-    const dbRef = ref(database, '/userHistory/gifUrl');
-    push(dbRef, gifData.images.original.url);
+    const dbRef = ref(database, '/userHistory');
+    push(dbRef, userChoice);
     // setUserClick();
-
-    const userSavedData = (user) => {
-      const userData = ref(database, '/userHistory/date')
-      push(userData, user)
-    }
-    userSavedData(currentDate.toLocaleString(undefined,options))
+  
     // clear page on click function needed to be placed correctly
     // window.location.reload(false);
 

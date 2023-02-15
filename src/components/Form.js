@@ -9,6 +9,7 @@ const Form = () => {
   const [ userInput, setUserInput ] = useState('');
   const [ wordCount, setWordCount ] = useState(0);
   const [ emptyInput, setEmptyInput] = useState(false);
+  const [ mostRecentSearch, setMostRecentSearch ] = useState('');
   const inputRef = useRef();
 
   const countWord = (e) => {
@@ -18,6 +19,7 @@ const Form = () => {
 
   const handleClick = (event) => {
     event.preventDefault();
+    setMostRecentSearch(userInput);
     setUserInput("");
 
   axios({
@@ -67,7 +69,7 @@ return (
       }
     </div>
 
-    <div><GifResult gifs={gifs} emptyInput={emptyInput}/></div>
+    <div><GifResult gifs={gifs} emptyInput={emptyInput} userInput={mostRecentSearch}/></div>
     </>
   )
 }

@@ -1,7 +1,7 @@
 
 import GifItem from "./GifItem";
 
-const GifResult = ({gifs, emptyInput}) => {
+const GifResult = ({gifs, emptyInput, userInput}) => {
   return (
     <>
       <ul>
@@ -10,7 +10,7 @@ const GifResult = ({gifs, emptyInput}) => {
           
           : (gifs.map((gifObject)=>{
             // console.log(gifObject);
-            return <li key={gifObject.id}> <GifItem gifData={gifObject}/> </li>
+            return <li key={gifObject.id}> <GifItem gifData={gifObject} userInput ={userInput}/> </li>
           }))
     }
       </ul>      
