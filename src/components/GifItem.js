@@ -23,15 +23,12 @@ const GifItem = ({gifData, userInput})=> {
     }
     
     const childRef = ref(database,`/userHistory/${firebaseKey}` )
-    console.log(childRef);
     update(childRef,idObject);
     
     
   
     // clear page on click function needed to be placed correctly
     // window.location.reload(false);
-
-    console.log(firebaseKey);
   }
 
 

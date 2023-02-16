@@ -1,6 +1,6 @@
 import MoodItem from './MoodItem';
 import { useEffect, useState } from 'react';
-import { getDatabase, ref, onValue, get } from 'firebase/database';
+import { getDatabase, ref, onValue } from 'firebase/database';
 import firebase from '../firebase'; 
 
 const MoodHistory = () =>{
@@ -14,21 +14,22 @@ const MoodHistory = () =>{
             // console.log(response.val());
             const newState = [];
             const data = response.val();
-            for (let key in data){
-                newState.push(data[key]);
+            for (let key in data.userHistory){
+                newState.push(data.userHistory[key]);
             }
             setMood(newState);
         })
     }, [])
-
     return(
         <>
         <ul>
             {mood.map((moods) => {
-                
                 return(
-                    <li><MoodItem moodData={moods}/></li>
+                    
+                    <li key={moods.id} ><MoodItem moodData={moods}/></li>
+                    
                 )
+                
             })}
             
         </ul>
