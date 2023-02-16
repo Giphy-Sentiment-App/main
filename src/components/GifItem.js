@@ -1,5 +1,5 @@
 import firebase from '../firebase';
-import { getDatabase, ref, push } from 'firebase/database';
+import { getDatabase, ref, push, update } from 'firebase/database';
 
 const GifItem = ({gifData, userInput})=> {
 
@@ -8,7 +8,8 @@ const GifItem = ({gifData, userInput})=> {
   const userChoice = {
     date: currentDate.toLocaleString(undefined, options),
     gifUrl: gifData.images.original.url,
-    emotion: userInput
+    emotion: userInput,
+
   }
 
   const gifClick = () => {
@@ -16,23 +17,29 @@ const GifItem = ({gifData, userInput})=> {
     const database = getDatabase(firebase);
     const dbRef = ref(database, '/userHistory');
     const firebaseObject = push(dbRef, userChoice);
-    const firebaseKey = firebaseObject.key
+    const firebaseKey = firebaseObject.key;
+    const idObject = {
+      id:firebaseKey
+    }
+    
+    const childRef = ref(database,`/userHistory/${firebaseKey}` )
+    console.log(childRef);
+    update(childRef,idObject);
     
     
-    // setUserClick();
   
     // clear page on click function needed to be placed correctly
     // window.location.reload(false);
 
-    console.log(gifData);
+    console.log(firebaseKey);
   }
- 
+
 
   return (
     <>
     <img src={gifData.images.original.url} alt={gifData.title} onClick={gifClick}/> 
     </>
-   
+
   )
 }
 

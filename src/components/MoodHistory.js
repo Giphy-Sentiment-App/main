@@ -16,7 +16,6 @@ const MoodHistory = () =>{
             const data = response.val();
             for (let key in data){
                 newState.push(data[key]);
-               
             }
             setMood(newState);
         })
