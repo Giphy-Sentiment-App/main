@@ -11,10 +11,10 @@ const Home = () =>{
     <Header />
     <Form />
     <div className="moodHistoryContainer">
-        <Link to="/MoodHistory"><button className='moodHistory'>Mood History</button></Link>
+        <Link to="/MoodHistory">
+          <button className='moodHistory'>Mood History</button>
+        </Link>
     </div>
-
-
     </>
   )
 }

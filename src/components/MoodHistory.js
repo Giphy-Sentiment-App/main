@@ -24,6 +24,7 @@ const MoodHistory = () =>{
         <>
         <ul>
             {mood.map((moods) => {
+                console.log(moods.id);
                 return(
                     
                     <li key={moods.id} ><MoodItem moodData={moods}/></li>
