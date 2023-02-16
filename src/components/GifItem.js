@@ -9,7 +9,6 @@ const GifItem = ({gifData, userInput})=> {
     date: currentDate.toLocaleString(undefined, options),
     gifUrl: gifData.images.original.url,
     emotion: userInput,
-
   }
 
   const gifClick = () => {
@@ -25,12 +24,10 @@ const GifItem = ({gifData, userInput})=> {
     const childRef = ref(database,`/userHistory/${firebaseKey}` )
     update(childRef,idObject);
     
-    
-  
     // clear page on click function needed to be placed correctly
-    // window.location.reload(false);
+    // window.location.reload(true);
   }
-
+  
 
   return (
     <>

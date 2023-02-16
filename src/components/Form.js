@@ -10,6 +10,7 @@ const Form = () => {
   const [ wordCount, setWordCount ] = useState(0);
   const [ emptyInput, setEmptyInput] = useState(false);
   const [ mostRecentSearch, setMostRecentSearch ] = useState('');
+  const [ loading, setLoading ] = useState(false)
   const inputRef = useRef();
 
   const countWord = (e) => {
@@ -22,6 +23,7 @@ const Form = () => {
     setMostRecentSearch(userInput);
     setUserInput("");
 
+    setLoading(true);
   axios({
     baseURL: `https://api.giphy.com/v1/gifs/search`,
     params: {
@@ -35,8 +37,10 @@ const Form = () => {
   
     if(res.data.data.length === 0){
       setEmptyInput(true);
+      setLoading(false);
     }else{
       setEmptyInput(false);
+      setLoading(false);
     }
   }) 
  
@@ -56,7 +60,7 @@ return (
       <form action="" onSubmit = {(event) => {handleClick(event, userInput, inputRef)}} >
         <label htmlFor="search"></label>
           <input onChange={ handleChange } ref={ inputRef } value={userInput} type="text" placeholder="grateful"/>
-        <button  type="submit">Submit</button>          
+        <button  type="submit">{ loading ? <>Loading..</> : <>Search</>}</button>          
       </form>
     </div>
     <div>
