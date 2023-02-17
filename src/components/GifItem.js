@@ -1,6 +1,5 @@
 import firebase from '../firebase';
 import { getDatabase, ref, push, update } from 'firebase/database';
-import { clear } from '@testing-library/user-event/dist/clear';
 
 const GifItem = ({gifData, userInput, clearGifs})=> {
 

@@ -2,7 +2,6 @@ import { useState, useRef } from "react";
 import axios from "axios";
 import GifResult from "./GifResult";
 
-
 const Form = () => {
 
   const [ gifs, setGifs] = useState([]);
@@ -15,15 +14,18 @@ const Form = () => {
 
   const countWord = (e) => {
     const text = inputRef.current.value;
-    setWordCount(text.split(" ").length);  
+    setWordCount(text.split(" ").length);
+    if (text.split(" ").length > 1) {
+      setUserInput("")
+    }  
   }
 
   const handleClick = (event) => {
     event.preventDefault();
     setMostRecentSearch(userInput);
     setUserInput("");
-
     setLoading(true);
+
   axios({
     baseURL: `https://api.giphy.com/v1/gifs/search`,
     params: {
@@ -50,15 +52,13 @@ const handleChange = (event) => {
   setUserInput(event.target.value);
   countWord();
   event.preventDefault();
- 
 }
 
 const clearGifs = () => {
   setGifs([]);
 }
 
-return (
-    
+return ( 
     <>
     <div>
       <form action="" onSubmit = {(event) => {handleClick(event, userInput, inputRef)}} >
@@ -70,12 +70,18 @@ return (
     <div>
       {
         wordCount > 1
-          ? alert("nuh uh uh! only one word!") && setUserInput("")
+          ? <p>nuh uh uh! one word please! </p>
           : null
       }
     </div>
 
-    <div><GifResult clearGifs={clearGifs} gifs={gifs} emptyInput={emptyInput} userInput={mostRecentSearch}/></div>
+    <div>
+      {
+        setGifs === true
+        ?<GifResult clearGifs={clearGifs} gifs={gifs} emptyInput={emptyInput} userInput={mostRecentSearch} />
+        :null
+      }
+    </div>
     </>
   )
 }
