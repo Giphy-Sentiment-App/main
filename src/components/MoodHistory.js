@@ -1,7 +1,10 @@
 import MoodItem from './MoodItem';
 import { useEffect, useState } from 'react';
 import { getDatabase, ref, onValue } from 'firebase/database';
-import firebase from '../firebase'; 
+import firebase from '../firebase';
+import logo from '../assets/logo.jpg';
+import { Link } from 'react-router-dom';
+ 
 
 const MoodHistory = () =>{
     const [ mood, setMood ] = useState([]);
@@ -20,20 +23,22 @@ const MoodHistory = () =>{
             setMood(newState);
         })
     }, [])
+
     return(
         <>
+        <div className="imgContainer">
+        <Link to="/"><img src={logo} alt="Giphy Sentiment Logo" width={150}/></Link> 
+        </div>
+        <h2>Your Mood History</h2>
         <ul>
             {mood.map((moods) => {
-                console.log(moods.id);
-                return(
-                    
+                return (
                     <li key={moods.id} ><MoodItem moodData={moods}/></li>
-                    
                 )
-                
             })}
             
         </ul>
+        <Link to="/"><button>Back to Home</button></Link>
         </>
     )
 }

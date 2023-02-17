@@ -1,7 +1,8 @@
 import firebase from '../firebase';
 import { getDatabase, ref, push, update } from 'firebase/database';
+import { clear } from '@testing-library/user-event/dist/clear';
 
-const GifItem = ({gifData, userInput})=> {
+const GifItem = ({gifData, userInput, clearGifs})=> {
 
   const currentDate = new Date();
   const options = {year:'numeric', month:'numeric', day:'numeric'}
@@ -11,6 +12,7 @@ const GifItem = ({gifData, userInput})=> {
     emotion: userInput,
   }
 
+  
   const gifClick = () => {
     
     const database = getDatabase(firebase);
@@ -25,7 +27,7 @@ const GifItem = ({gifData, userInput})=> {
     update(childRef,idObject);
     
     // clear page on click function needed to be placed correctly
-    // window.location.reload(true);
+    clearGifs();
   }
   
 

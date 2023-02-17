@@ -53,6 +53,10 @@ const handleChange = (event) => {
  
 }
 
+const clearGifs = () => {
+  setGifs([]);
+}
+
 return (
     
     <>
@@ -68,12 +72,10 @@ return (
         wordCount > 1
           ? alert("nuh uh uh! only one word!") && setUserInput("")
           : null
-
-        
       }
     </div>
 
-    <div><GifResult gifs={gifs} emptyInput={emptyInput} userInput={mostRecentSearch}/></div>
+    <div><GifResult clearGifs={clearGifs} gifs={gifs} emptyInput={emptyInput} userInput={mostRecentSearch}/></div>
     </>
   )
 }

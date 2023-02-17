@@ -1,7 +1,7 @@
 
 import GifItem from "./GifItem";
 
-const GifResult = ({gifs, emptyInput, userInput}) => {
+const GifResult = ({gifs, emptyInput, userInput, clearGifs}) => {
   return (
     <>
       <ul>
@@ -9,7 +9,7 @@ const GifResult = ({gifs, emptyInput, userInput}) => {
           emptyInput ? <p>Please tell us how you are feeling today</p>
           
           : (gifs.map((gifObject)=>{
-            return <li key={gifObject.id}> <GifItem gifData={gifObject} userInput ={userInput}/> </li>
+            return <li key={gifObject.id}> <GifItem clearGifs={clearGifs} gifData={gifObject} userInput ={userInput}/> </li>
           }))
     }
       </ul>      
