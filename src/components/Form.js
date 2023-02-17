@@ -74,14 +74,7 @@ return (
           : null
       }
     </div>
-
-    <div>
-      {
-        setGifs === true
-        ?<GifResult clearGifs={clearGifs} gifs={gifs} emptyInput={emptyInput} userInput={mostRecentSearch} />
-        :null
-      }
-    </div>
+      <GifResult clearGifs={clearGifs} gifs={gifs} emptyInput={emptyInput} userInput={mostRecentSearch} />
     </>
   )
 }

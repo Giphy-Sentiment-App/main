@@ -3,7 +3,11 @@ import GifItem from "./GifItem";
 const GifResult = ({gifs, emptyInput, userInput, clearGifs}) => {
   return (
     <> 
-      <h2>Please select a gif that speaks to you to log in Mood History or try another word or pharse for different results.</h2> 
+    {/* condition to have the h2 pop up on gift search only */}
+      {
+        gifs.length === 0 ? null
+        : <h2>Please select a gif that speaks to you to log in Mood History or try another word or pharse for different results.</h2> 
+      }
       <ul>
         {
           emptyInput ? <p>Please tell us how you are feeling today</p>
