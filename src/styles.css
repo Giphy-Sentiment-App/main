@@ -215,4 +215,13 @@ template {
           clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+@font-face {
+  font-family: "Josefin Slab";
+  src: url("./fonts/Josefin_Slab/JosefinSlab-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "Lato";
+  src: url("./fonts/Lato/Lato-Regular.ttf");
 }/*# sourceMappingURL=styles.css.map */
