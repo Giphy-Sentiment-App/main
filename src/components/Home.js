@@ -1,8 +1,9 @@
+// imported libraries needed
 import React from 'react'
 import Header from './Header';
 import Form from './Form';
-import { Link, Routes, Route } from 'react-router-dom';
-import MoodHistory from './MoodHistory';
+import { Link } from 'react-router-dom';
+
 
 
 const Home = () =>{

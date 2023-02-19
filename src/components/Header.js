@@ -1,6 +1,7 @@
 import logo from '../assets/logo.jpg';
 
 const Header = () => {
+  // created variables for the date to appear as the same as the browser locale, with options to how to be displayed
   const currentDate = new Date();
   const options = {year:'numeric', month:'numeric', day:'numeric'}
   return (

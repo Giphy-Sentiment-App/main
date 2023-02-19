@@ -1,9 +1,10 @@
+// imported libraries needed
 import { useState, useRef } from "react";
 import axios from "axios";
 import GifResult from "./GifResult";
 
 const Form = () => {
-
+// initialize state
   const [ gifs, setGifs] = useState([]);
   const [ userInput, setUserInput ] = useState('');
   const [ wordCount, setWordCount ] = useState(0);
@@ -12,6 +13,7 @@ const Form = () => {
   const [ loading, setLoading ] = useState(false)
   const inputRef = useRef();
 
+  // create a function to count userInput
   const countWord = (e) => {
     const text = inputRef.current.value;
     setWordCount(text.split(" ").length);
@@ -20,6 +22,8 @@ const Form = () => {
     }  
   }
 
+  // create a function to :
+    // call the API onclick, and load API states
   const handleClick = (event) => {
     event.preventDefault();
     setMostRecentSearch(userInput);
@@ -45,15 +49,16 @@ const Form = () => {
       setLoading(false);
     }
   }) 
- 
 }
 
+// create a function to save user input
 const handleChange = (event) => {
   setUserInput(event.target.value);
   countWord();
   event.preventDefault();
 }
 
+// create a funciton to clear the gifs
 const clearGifs = () => {
   setGifs([]);
 }

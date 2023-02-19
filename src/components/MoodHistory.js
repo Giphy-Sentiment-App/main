@@ -1,20 +1,21 @@
+// import libraries needed
 import MoodItem from './MoodItem';
 import { useEffect, useState } from 'react';
 import { getDatabase, ref, onValue } from 'firebase/database';
 import firebase from '../firebase';
 import logo from '../assets/logo.jpg';
 import { Link } from 'react-router-dom';
- 
+
 
 const MoodHistory = () =>{
+    // initialize states
     const [ mood, setMood ] = useState([]);
-
+    // getting data from firebase
     useEffect(() => {
         const database = getDatabase(firebase);
         const dbRef = ref(database);
 
         onValue(dbRef, (response) =>{
-            // console.log(response.val());
             const newState = [];
             const data = response.val();
             for (let key in data.userHistory){

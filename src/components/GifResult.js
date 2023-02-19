@@ -1,5 +1,6 @@
 import GifItem from "./GifItem";
 
+// using props to create objects from API data
 const GifResult = ({gifs, emptyInput, userInput, clearGifs}) => {
   return (
     <> 

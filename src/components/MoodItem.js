@@ -1,5 +1,4 @@
-import firebase from "../firebase";
-
+// use props to pass down data from Firebase
 const MoodItem = ({moodData}) => {
     return(
         <div className="gifContainer">
