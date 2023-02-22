@@ -12,6 +12,8 @@ const Form = () => {
   const [ mostRecentSearch, setMostRecentSearch ] = useState('');
   const [ loading, setLoading ] = useState(false)
   const inputRef = useRef();
+  const [showMsg, setShowMsg] = useState(false);
+
 
   // create a function to count userInput
   const countWord = (e) => {
@@ -61,7 +63,10 @@ const handleChange = (event) => {
 // create a funciton to clear the gifs
 const clearGifs = () => {
   setGifs([]);
+  setShowMsg(true);
 }
+
+
 
 return ( 
     <>
@@ -77,6 +82,11 @@ return (
         wordCount > 1
           ? <p>nuh uh uh! one word please! </p>
           : null
+      }
+      {
+        showMsg === true
+        ? <h3>Your mood has been saved!</h3>
+        : null
       }
     </div>
       <GifResult clearGifs={clearGifs} gifs={gifs} emptyInput={emptyInput} userInput={mostRecentSearch} />

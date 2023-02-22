@@ -7,7 +7,6 @@ import { getDatabase, ref, push, update } from 'firebase/database';
 const GifItem = ({gifData, userInput, clearGifs})=> {
 
   // initialize states
-  const [showMsg, setShowMsg]= useState(false);
   const currentDate = new Date();
   const options = {year:'numeric', month:'numeric', day:'numeric'}
   const userChoice = {
@@ -27,18 +26,7 @@ const GifItem = ({gifData, userInput, clearGifs})=> {
     const childRef = ref(database,`/userHistory/${firebaseKey}` )
     update(childRef,idObject);
     
-
-    // TODO: add saved msg to the page
-    
-    // if(setShowMsg == true){
-    //   return(
-    //   <h2>Saved!</h2>
-    //   )
-    // }
-
-    setShowMsg(true);
-
-    // clear page on click function 
+    // clear page on click function and show saved message 
     clearGifs();
   }
 
