@@ -1,0 +1,27 @@
+.searchButton {
+    border: 2px solid $secondaryColor;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 8px;
+    margin-left: 15px;
+    background-color: $solidWhite;
+    color: $secondaryColor;
+    transition: 0.3s;
+    
+    &:hover,
+    &:focus {
+        background-color: $secondaryColor;
+        color: $solidWhite;
+    }
+}
+
+input {
+    width: 500px;
+    margin-left: 10px;
+    line-height: 2.5rem;
+
+    &::placeholder{
+        font-size: 20px;
+        font-family: $bodyFont;
+    }
+}

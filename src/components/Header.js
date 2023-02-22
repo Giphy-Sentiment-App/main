@@ -9,8 +9,13 @@ const Header = () => {
     <div className="imgContainer">
     <img src={logo} alt="Giphy Sentiment Logo" width={150}/>
     </div>
-    <h1>{currentDate.toLocaleString(undefined,options)}</h1>
+    <div className="wrapper">
+      <h1>{currentDate.toLocaleString(undefined,options)}</h1>
     <h2>Please describe your emotional state with ONE word.</h2>
+
+    </div>
+    
+    
     </>
     
   )

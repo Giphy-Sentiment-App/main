@@ -11,7 +11,7 @@ const Home = () =>{
     <>
     <Header />
     <Form />
-    <div className="moodHistoryContainer">
+    <div className="moodHistoryContainer wrapper">
         <Link to="/MoodHistory">
           <button className='moodHistory'>Mood History</button>
         </Link>
