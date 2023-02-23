@@ -1,7 +1,7 @@
 import './styles.css' ; 
 import Home from './components/Home';
 import Footer from './components/Footer';
-import { Link, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import MoodHistory from './components/MoodHistory';
 
 

@@ -1,6 +1,5 @@
 // import libraries needed
 import firebase from '../firebase';
-import { useState } from 'react';
 import { getDatabase, ref, push, update } from 'firebase/database';
 
 // use props to create objects from Firebase
