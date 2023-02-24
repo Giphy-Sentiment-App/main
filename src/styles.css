@@ -231,6 +231,18 @@ h3 {
   font-family: "Josefin Slab", serif;
 }
 
+h1 {
+  width: 100%;
+  text-align: center;
+  font-size: 4rem;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
 body {
   font-family: "Lato", sans-serif;
 }
@@ -244,16 +256,32 @@ body {
   max-width: 1200px;
   width: 90%;
   margin: 0 auto;
+}
+
+main {
   background-color: #f4e6e8;
+  min-height: 90vh;
 }
 
 ul {
   list-style: none;
 }
 
-h2 {
-  text-transform: uppercase;
-  font-size: 1.3rem;
+header .imgContainer img {
+  width: 100px;
+  border-radius: 50%;
+  border: 1px solid #ff7600;
+  margin-top: 5px;
+}
+header .imgContainer {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+form {
+  text-align: center;
+  padding: 2rem 0;
 }
 
 .searchButton {
@@ -269,12 +297,14 @@ h2 {
 .searchButton:hover, .searchButton:focus {
   background-color: #6056f9;
   color: #fff;
+  cursor: pointer;
 }
 
 input {
   width: 500px;
   margin-left: 10px;
   line-height: 2.5rem;
+  border: none;
 }
 input::-moz-placeholder {
   font-size: 20px;
@@ -283,6 +313,29 @@ input::-moz-placeholder {
 input::placeholder {
   font-size: 20px;
   font-family: "Lato", sans-serif;
+}
+input:hover, input:focus {
+  outline: none;
+  border: 2px solid #6056f9;
+}
+
+.moodHistoryContainer {
+  text-align: center;
+  width: auto;
+}
+.moodHistoryContainer a {
+  text-decoration: none;
+  color: #6056f9;
+}
+.moodHistoryContainer a:hover, .moodHistoryContainer a:focus {
+  color: #ff7600;
+}
+.moodHistoryContainer .fa-shield-heart {
+  font-size: 3rem;
+  color: #6056f9;
+}
+.moodHistoryContainer .fa-shield-heart:hover, .moodHistoryContainer .fa-shield-heart:focus {
+  color: #ff7600;
 }
 
 footer {

@@ -17,6 +17,18 @@ h3{
     font-family: $headingFont ;
 }
 
+h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 4rem;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
 body{
     font-family:$bodyFont;
 }

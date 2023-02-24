@@ -1,4 +1,18 @@
-h2{
-    text-transform: uppercase;
-    font-size: 1.3rem;
+header{
+    
+    .imgContainer img{
+        width: 100px;
+        border-radius: 50%;
+        border: 1px solid $primaryColor;
+        margin-top: 5px;
+    }
+
+    .imgContainer{
+        display: flex;
+        width: 100%;
+        align-items: center;
+    }
+
+    
 }
+

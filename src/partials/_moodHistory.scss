@@ -1,0 +1,20 @@
+.moodHistoryContainer {
+    text-align: center;
+    width: auto;
+    a{
+        text-decoration: none;
+        color: $secondaryColor;
+        &:hover,
+        &:focus {
+            color: $primaryColor;
+        }
+    }
+    .fa-shield-heart {
+        font-size: 3rem;
+        color: $secondaryColor;
+        &:hover,
+        &:focus {
+            color: $primaryColor;
+        }
+    }
+}
