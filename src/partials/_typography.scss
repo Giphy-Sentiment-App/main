@@ -1,15 +1,22 @@
 // Josefin Slab is the headings font
-@font-face {
-    font-family: "Josefin Slab";
-    src: url('./fonts/Josefin_Slab/JosefinSlab-VariableFont_wght.ttf');
-}
+// @font-face {
+//     font-family: "Josefin Slab";
+//     src: url('./fonts/Josefin_Slab/JosefinSlab-VariableFont_wght.ttf');
+// }
 
+
+// Changed heading font to Carter One 
+@font-face {
+    font-family:'Carter One';
+    src: url('./fonts/Carter_One/CarterOne-Regular.ttf')
+}
 
 // Lato is the body font
 @font-face{
     font-family: 'Lato';
     src: url('./fonts/Lato/Lato-Regular.ttf');
 }
+
 
 h1,
 h2,
@@ -22,6 +29,7 @@ h1 {
     width: 100%;
     text-align: center;
     font-size: 4rem;
+
 }
 
 h2,h3, p {

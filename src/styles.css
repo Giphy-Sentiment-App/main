@@ -218,8 +218,8 @@ template {
 }
 
 @font-face {
-  font-family: "Josefin Slab";
-  src: url("./fonts/Josefin_Slab/JosefinSlab-VariableFont_wght.ttf");
+  font-family: "Carter One";
+  src: url("./fonts/Carter_One/CarterOne-Regular.ttf");
 }
 @font-face {
   font-family: "Lato";
@@ -228,7 +228,7 @@ template {
 h1,
 h2,
 h3 {
-  font-family: "Josefin Slab", serif;
+  font-family: "Carter One", cursive;
 }
 
 h1 {
@@ -363,7 +363,7 @@ input:hover, input:focus {
 
 .imgGallery {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
   justify-content: space-evenly;
   text-align: center;
   flex-direction: row-reverse;
