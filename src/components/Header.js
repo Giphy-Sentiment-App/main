@@ -9,7 +9,7 @@ const Header = () => {
     <header>
     <div className="wrapper">
     <div className="imgContainer">
-      <img src={logo} alt="Giphy Sentiment Logo"/>
+      <img src={logo} alt="Giphy Sentiment Logo" width={150}/>
       <h1>{currentDate.toLocaleString(undefined,options)}</h1>
         <div className="moodHistoryContainer wrapper">
           <Link to="/MoodHistory">

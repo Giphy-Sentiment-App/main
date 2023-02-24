@@ -11,7 +11,7 @@ const GifResult = ({gifs, emptyInput, userInput, clearGifs}) => {
       }
       <ul className="imgGallery wrapper">
         {
-          emptyInput ? <p>Please tell us how you are feeling today</p>
+          emptyInput ? <h3>Please tell us how you are feeling today</h3>
           
           : (gifs.map((gifObject)=>{
             return(

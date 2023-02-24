@@ -85,7 +85,7 @@ return (
       }
       {
         showMsg === true
-        ? <h3>Your mood has been saved!</h3>
+        ? <h3>Your mood has been saved. Check out the Mood History button!</h3>
         : null
       }
     </div>

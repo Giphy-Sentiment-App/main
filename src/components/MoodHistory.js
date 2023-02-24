@@ -26,23 +26,23 @@ const MoodHistory = () =>{
     }, [])
 
     return(
-        <>
-        <div className="imgContainer wrapper">
-        <Link to="/"><img src={logo} alt="Giphy Sentiment Logo" width={150}/></Link> 
-        </div>
-        <h2>Your Mood History</h2>
-        <ul className='imgGallery wrapper'>
-            {mood.map((moods) => {
-                return (
-                    <li className='images' key={moods.id} ><MoodItem moodData={moods}/></li>
-                )
-            })}
-            
-        </ul>
-        <div className="btnContainer">
-        <Link to="/"><button className='backBtn'>Back to Home</button></Link>
-        </div>
-        </>
+        <section className='moodHistory'>
+            <div className="imgContainer wrapper">
+            <Link to="/"><img src={logo} alt="Giphy Sentiment Logo" width={150}/></Link> 
+            </div>
+            <h2>Your Mood History</h2>
+            <ul className='imgGallery wrapper'>
+                {mood.map((moods) => {
+                    return (
+                        <li className='images' key={moods.id} ><MoodItem moodData={moods}/></li>
+                    )
+                })}
+                
+            </ul>
+            <div className="btnContainer">
+            <Link to="/"><button className='backBtn'>Back to Home</button></Link>
+            </div>
+        </section>
     )
 }
 
