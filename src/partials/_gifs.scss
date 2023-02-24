@@ -1,0 +1,30 @@
+.imgGallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    text-align: center;
+    flex-direction: row-reverse;
+
+    .images{
+        display: flex;
+        align-items: center;
+        width: 25%;
+        padding: 10px;
+        border-radius: 10%;
+        margin: 20px 20px;
+        background-color: $secondaryColor;
+
+        &:hover,
+        &:focus{
+            transform: scale(0.9);
+            cursor: pointer;
+        }
+
+        img{
+            // height: 100%;
+            width: 100%;
+            border-radius: 10%;
+           
+        }
+    }
+}

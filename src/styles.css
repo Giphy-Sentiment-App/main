@@ -237,7 +237,7 @@ h1 {
   font-size: 4rem;
 }
 
-h2 {
+h2, h3, p {
   text-transform: uppercase;
   font-size: 1.3rem;
   text-align: center;
@@ -245,6 +245,7 @@ h2 {
 
 body {
   font-family: "Lato", sans-serif;
+  color: #0B2027;
 }
 
 * {
@@ -259,7 +260,7 @@ body {
 }
 
 main {
-  background-color: #f4e6e8;
+  background-color: #FCFAEE;
   min-height: 90vh;
 }
 
@@ -267,13 +268,14 @@ ul {
   list-style: none;
 }
 
-header .imgContainer img {
+.imgContainer img {
   width: 100px;
   border-radius: 50%;
-  border: 1px solid #ff7600;
+  border: 1px solid #2F5B65;
   margin-top: 5px;
 }
-header .imgContainer {
+
+.imgContainer {
   display: flex;
   width: 100%;
   align-items: center;
@@ -285,17 +287,17 @@ form {
 }
 
 .searchButton {
-  border: 2px solid #6056f9;
+  border: 2px solid #70A9A1;
   font-size: 20px;
   font-weight: bold;
   padding: 8px;
   margin-left: 15px;
   background-color: #fff;
-  color: #6056f9;
+  color: #70A9A1;
   transition: 0.3s;
 }
 .searchButton:hover, .searchButton:focus {
-  background-color: #6056f9;
+  background-color: #70A9A1;
   color: #fff;
   cursor: pointer;
 }
@@ -316,7 +318,7 @@ input::placeholder {
 }
 input:hover, input:focus {
   outline: none;
-  border: 2px solid #6056f9;
+  border: 2px solid #70A9A1;
 }
 
 .moodHistoryContainer {
@@ -325,21 +327,68 @@ input:hover, input:focus {
 }
 .moodHistoryContainer a {
   text-decoration: none;
-  color: #6056f9;
+  color: #2F5B65;
 }
 .moodHistoryContainer a:hover, .moodHistoryContainer a:focus {
-  color: #ff7600;
+  color: #70A9A1;
 }
 .moodHistoryContainer .fa-shield-heart {
   font-size: 3rem;
-  color: #6056f9;
+  color: #2F5B65;
 }
 .moodHistoryContainer .fa-shield-heart:hover, .moodHistoryContainer .fa-shield-heart:focus {
-  color: #ff7600;
+  color: #70A9A1;
+}
+
+.btnContainer {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+.btnContainer .backBtn {
+  border: 2px solid #70A9A1;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 8px;
+  margin-left: 15px;
+  background-color: #fff;
+  color: #70A9A1;
+  transition: 0.3s;
+}
+.btnContainer .backBtn:hover, .btnContainer .backBtn:focus {
+  background-color: #70A9A1;
+  color: #fff;
+  cursor: pointer;
+}
+
+.imgGallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  text-align: center;
+  flex-direction: row-reverse;
+}
+.imgGallery .images {
+  display: flex;
+  align-items: center;
+  width: 25%;
+  padding: 10px;
+  border-radius: 10%;
+  margin: 20px 20px;
+  background-color: #70A9A1;
+}
+.imgGallery .images:hover, .imgGallery .images:focus {
+  transform: scale(0.9);
+  cursor: pointer;
+}
+.imgGallery .images img {
+  width: 100%;
+  border-radius: 10%;
 }
 
 footer {
-  background-color: #E5E5E5;
-  color: #ff7600;
+  background-color: #CFD7C7;
+  color: #2F5B65;
   text-align: center;
+  padding: 5px;
 }/*# sourceMappingURL=styles.css.map */

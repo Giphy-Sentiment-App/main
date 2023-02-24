@@ -9,13 +9,13 @@ const GifResult = ({gifs, emptyInput, userInput, clearGifs}) => {
         gifs.length === 0 ? null
         : <div className="wrapper"> <h2>Please select a gif that speaks to you to log in Mood History or try another word or pharse for different results.</h2> </div>
       }
-      <ul className="wrapper">
+      <ul className="imgGallery wrapper">
         {
           emptyInput ? <p>Please tell us how you are feeling today</p>
           
           : (gifs.map((gifObject)=>{
             return(
-              <li key={gifObject.id}> 
+              <li className = 'images' key={gifObject.id}> 
                 <GifItem clearGifs={clearGifs} 
                 gifData={gifObject} 
                 userInput={userInput} />
