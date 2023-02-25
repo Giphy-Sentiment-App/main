@@ -1,4 +1,4 @@
-import logo from '../assets/logo.jpg';
+import logo from '../assets/newLogo.jpg';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
@@ -13,7 +13,7 @@ const Header = () => {
       <h1>{currentDate.toLocaleString(undefined,options)}</h1>
         <div className="moodHistoryContainer wrapper">
           <Link to="/MoodHistory">
-            <i class="fa-solid fa-shield-heart"></i>
+            <i className="fa-solid fa-shield-heart"></i>
             <div className='moodHistory'>Mood History</div>
           </Link>
         </div>
