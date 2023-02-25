@@ -18,7 +18,7 @@ const Header = () => {
           </Link>
         </div>
     </div>
-    <h2>Please describe your emotional state with ONE word.</h2>
+    <h2>Please describe your mood with ONE word.</h2>
 
     </div>
     

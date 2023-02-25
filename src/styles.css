@@ -273,6 +273,11 @@ ul {
   list-style: none;
 }
 
+button:hover,
+button:focus {
+  cursor: pointer;
+}
+
 .imgContainer img {
   width: 100px;
   border-radius: 50%;
@@ -395,6 +400,31 @@ input:hover, input:focus {
 .imgGallery .images img {
   width: 100%;
   border-radius: 10%;
+}
+.imgGallery .triangle {
+  background-color: transparent;
+  border: none;
+}
+.imgGallery .triangle img {
+  padding-top: 5%;
+  width: 15%;
+}
+@keyframes progres {
+  0% {
+    width: 0%;
+  }
+  25% {
+    width: 50%;
+  }
+  50% {
+    width: 75%;
+  }
+  75% {
+    width: 85%;
+  }
+  100% {
+    width: 100%;
+  }
 }
 
 footer {

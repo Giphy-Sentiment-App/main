@@ -15,7 +15,7 @@ const GifResult = ({gifs, emptyInput, userInput, clearGifs}) => {
           
           : (gifs.map((gifObject)=>{
             return(
-              <li className = 'images' key={gifObject.id}> 
+              <li className ="images" key={gifObject.id}> 
                 <GifItem clearGifs={clearGifs} 
                 gifData={gifObject} 
                 userInput={userInput} />
