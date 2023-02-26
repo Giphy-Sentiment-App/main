@@ -266,7 +266,7 @@ body {
 main {
   background-color: #FDFAF2;
   padding-top: 2rem;
-  min-height: 100vh;
+  min-height: 96vh;
 }
 
 ul {
@@ -432,5 +432,4 @@ footer {
   color: #fff;
   text-align: center;
   padding: 10px;
-  min-height: 3vh;
 }/*# sourceMappingURL=styles.css.map */
