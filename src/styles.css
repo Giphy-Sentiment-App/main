@@ -362,6 +362,10 @@ input:hover, input:focus {
   color: #185950;
 }
 
+.historyData p {
+  font-size: 1.3rem;
+}
+
 .btnContainer {
   display: flex;
   justify-content: center;
@@ -476,5 +480,13 @@ footer a {
   }
   .historyData p {
     font-size: 1.3rem;
+  }
+}
+@media (max-width: 500px) {
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1rem;
   }
 }/*# sourceMappingURL=styles.css.map */

@@ -7,7 +7,7 @@ const GifResult = ({gifs, emptyInput, userInput, clearGifs}) => {
     {/* condition to have the h2 pop up on gift search only */}
       {
         gifs.length === 0 ? null
-        : <div className="wrapper"> <h2>Please select a gif that speaks to you to log in Mood History or try another word or pharse for different results.</h2> </div>
+        : <div className="wrapper"> <h2>Please select a gif that speaks to you to log in Mood History or try another word or mood for different results.</h2> </div>
       }
       <ul className="imgGallery wrapper">
         {
