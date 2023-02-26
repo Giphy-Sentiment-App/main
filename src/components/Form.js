@@ -73,14 +73,14 @@ return (
     <div className="wrapper">
       <form action="" onSubmit = {(event) => {handleClick(event, userInput, inputRef)}} >
         <label htmlFor="search"></label>
-          <input onChange={ handleChange } ref={ inputRef } value={userInput} type="text" placeholder="grateful"/>
+          <input onChange={ handleChange } ref={ inputRef } value={userInput} type="text" placeholder="  e.g. grateful, happy..."/>
         <button  className="searchButton" type="submit">{ loading ? <>Loading..</> : <>Search</>}</button>          
       </form>
     </div>
     <div>
       {
         wordCount > 1
-          ? <p>nuh uh uh! one word please! </p>
+          ? <div className="wrapper"><h2>nuh uh uh! one word please! </h2></div>
           : null
       }
       {

@@ -1,5 +1,5 @@
     .imgContainer img{
-        width: 100px;
+        width: 5rem;
         border-radius: 50%;
         border: 1px solid $primaryColor;
         margin-top: 5px;
@@ -7,10 +7,14 @@
 
     .imgContainer{
         display: flex;
+        justify-content: space-evenly;
         width: 100%;
         align-items: center;
     }
 
+    .titleContainer {
+        text-align: center;
+    }
     
 
 

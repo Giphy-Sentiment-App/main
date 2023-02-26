@@ -27,8 +27,11 @@ const MoodHistory = () =>{
 
     return(
         <main className='moodHistory'>
-            <div className="imgContainer wrapper">
+            <div className="wrapper">
+            <div className="imgContainer">
             <Link to="/"><img src={logo} alt="Giphy Sentiment Logo" width={150}/></Link> 
+            <h1>Giphy Sentiment</h1>
+            </div>
             </div>
             <h2>Your Mood History</h2>
             <ul className='imgGallery wrapper'>
@@ -39,8 +42,10 @@ const MoodHistory = () =>{
                 })}
                 
             </ul>
+            <div className="wrapper">
             <div className="btnContainer">
             <Link to="/"><button className='backBtn'>Back to Home</button></Link>
+            </div>
             </div>
         </main>
     )

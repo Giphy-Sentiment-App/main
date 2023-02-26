@@ -240,11 +240,14 @@ h1 {
 }
 
 h2,
-h3,
-p {
+h3 {
   text-transform: uppercase;
   font-size: 1.3rem;
   text-align: center;
+}
+
+p {
+  font-size: 0.8rem;
 }
 
 body {
@@ -265,7 +268,6 @@ body {
 
 main {
   background-color: #FDFAF2;
-  padding-top: 2rem;
   min-height: 96vh;
 }
 
@@ -279,7 +281,7 @@ button:focus {
 }
 
 .imgContainer img {
-  width: 100px;
+  width: 5rem;
   border-radius: 50%;
   border: 1px solid #992F15;
   margin-top: 5px;
@@ -287,8 +289,13 @@ button:focus {
 
 .imgContainer {
   display: flex;
+  justify-content: space-evenly;
   width: 100%;
   align-items: center;
+}
+
+.titleContainer {
+  text-align: center;
 }
 
 form {
@@ -338,6 +345,7 @@ input:hover, input:focus {
 .moodHistoryContainer {
   text-align: center;
   width: auto;
+  margin: 0;
 }
 .moodHistoryContainer a {
   text-decoration: none;
@@ -431,5 +439,44 @@ footer {
   background-color: #992F15;
   color: #fff;
   text-align: center;
+  line-height: 1.3rem;
   padding: 10px;
+}
+
+@media (max-width: 680px) {
+  .imgContainer img {
+    width: 4rem;
+  }
+  .moodHistoryContainer .fa-shield-heart {
+    font-size: 2.5rem;
+  }
+  input {
+    width: 100%;
+    margin-left: 0;
+  }
+  input::-moz-placeholder {
+    text-align: center;
+  }
+  input::placeholder {
+    text-align: center;
+  }
+  .searchButton {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 5px;
+  }
+  footer p {
+    font-size: 0.75rem;
+    line-height: 1.3rem;
+  }
+  h1 {
+    font-size: 3.5rem;
+  }
+  .btnContainer {
+    display: inline-block;
+    width: 100%;
+  }
+  .btnContainer .backBtn {
+    width: 100%;
+  }
 }/*# sourceMappingURL=styles.css.map */
