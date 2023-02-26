@@ -1,0 +1,44 @@
+.imgGallery{
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: space-evenly;
+    text-align: center;
+    flex-direction: row-reverse;
+
+    p{
+        color:$solidWhite;
+    }
+
+    .images{
+        display: flex;
+        align-items: center;
+        width: 25%;
+        padding: 10px;
+        border-radius: 10%;
+        margin: 20px 20px;
+        background-color: $secondaryColor;
+
+        &:hover,
+        &:focus{
+            transform: scale(0.9);
+            cursor: pointer;
+        }
+
+        img{
+            width: 100%;
+            border-radius: 10%;
+        }
+    }
+
+        .triangle {
+            background-color: transparent;
+            border: none;
+        }
+    
+        .triangle img {
+            padding-top: 5%;
+            width: 15%;
+
+        }
+    
+}

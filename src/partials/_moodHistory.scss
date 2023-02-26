@@ -1,0 +1,50 @@
+.moodHistory{
+    background-color: $backgroundColor;
+}
+.moodHistoryContainer {
+    text-align: center;
+    width: auto;
+    margin: 0;
+    
+    a{
+        text-decoration: none;
+        color: $primaryColor;
+        &:hover,
+        &:focus {
+            color: $secondaryColor;
+        }
+    }
+    .fa-shield-heart {
+        font-size: 3rem;
+        color: $primaryColor;
+        &:hover,
+        &:focus {
+            color: $secondaryColor;
+        }
+    }
+}
+
+.btnContainer{
+    display: flex;
+    justify-content: center;
+    
+    .backBtn {
+        border: 2px solid $secondaryColor;
+        font-size: 20px;
+        font-weight: bold;
+        margin: 15px 0;
+        padding: 8px;
+        background-color: $solidWhite;
+        color: $secondaryColor;
+        transition: 0.3s;
+    
+        &:hover,
+        &:focus {
+            background-color: $secondaryColor;
+            color: $solidWhite;
+            cursor: pointer;
+        }
+    }
+
+}
+
