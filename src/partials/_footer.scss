@@ -4,4 +4,8 @@ footer{
     text-align: center;
     line-height: 1.3rem;
     padding: 10px;
+    a{
+        color: $solidWhite;
+        text-decoration: none;
+    }
 }

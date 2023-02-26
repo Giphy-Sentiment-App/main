@@ -3,7 +3,7 @@ const Footer = () =>{
     
     <footer>
         <p>
-          Created by Michelle Dumout, Jessica Handrahan and Jasmine Lo at Juno College 2023©
+        Created by <a href="https://michelledcodes.com/">Michelle</a>, <a href="https://jessicahandrahan.ca/">Jessica</a> and <a href="https://jasminelo.com/">Jasmine</a> at Juno College 2023©
         </p>
 
     </footer>
