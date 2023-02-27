@@ -22,8 +22,7 @@ const GifResult = ({gifs, emptyInput, userInput, clearGifs}) => {
               </li>
             )
           }))
-        }
-        
+        } 
       </ul>      
     </>
   )

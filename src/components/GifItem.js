@@ -33,8 +33,6 @@ const GifItem = ({gifData, userInput, clearGifs})=> {
   return (
     <>
       <img src={gifData.images.original.url} alt={gifData.title} onClick={gifClick}/>
-      
-      
     </>
 
   )
